@@ -1,0 +1,14 @@
+The files in this folder are derived from ComfyUI-DLSS5-Enhancer by Blueforcer
+(https://github.com/Blueforcer/ComfyUI-DLSS5-Enhancer), which is MIT licensed.
+Please keep a copy of the upstream LICENSE file next to this notice.
+
+Changes made for this standalone app:
+  imaging.py  - replaced by a torch-free subset (ComfyUI tensor helpers removed)
+  media.py    - RawFrameEncoder accepts extra ffmpeg output arguments (colour-matrix handling);
+                mux() accepts source_start so the audio can follow a trimmed start point
+  __init__.py - added
+All other files are unmodified.
+
+The native runtime (NVIDIA / ReShade / RenoDX components and the worker executable) is NOT part
+of this folder or of this app's files. It is copied from your own install or downloaded from its
+upstream project by setup.bat, under its own licence terms.

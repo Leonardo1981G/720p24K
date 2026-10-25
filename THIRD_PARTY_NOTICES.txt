@@ -1,0 +1,21 @@
+THIRD-PARTY COMPONENTS
+This package contains only the app's own files plus a small client library. Everything else is downloaded
+or copied by setup.bat on the user's own PC, under the licence of each project. Please read those licences.
+
+Included in this package
+  dlss5\   Client code for the DLSS 5 worker, derived from ComfyUI-DLSS5-Enhancer by Blueforcer (MIT licence),
+           https://github.com/Blueforcer/ComfyUI-DLSS5-Enhancer . Keep a copy of the upstream LICENSE file with it.
+           See dlss5\NOTICE.txt for the changes made.
+
+Downloaded or copied by setup.bat (not part of this package)
+  Python (embeddable)        python.org, PSF licence
+  numpy, PyAV (av), OpenCV   BSD / BSD / Apache-2.0 licences, installed with pip
+  waifu2x-ncnn-vulkan        nihui, MIT licence
+  Real-ESRGAN ncnn Vulkan    optional, BSD / MIT licences
+  FFmpeg                     LGPL/GPL depending on the build, https://ffmpeg.org
+  DLSS 5 runtime             NVIDIA, ReShade and RenoDX components plus a worker program published by
+                             Merserk/dlss5-visual-enhancer. These are proprietary or separately licensed and are
+                             NOT redistributed here: setup.bat copies them from the user's own existing install or
+                             downloads them from the upstream project after the user accepts its terms.
+
+This project is not affiliated with or endorsed by NVIDIA, ReShade, RenoDX or the upstream projects above.
