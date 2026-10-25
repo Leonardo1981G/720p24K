@@ -1,7 +1,6 @@
 LOCAL VIDEO UPSCALER
 Waifu2x + NVIDIA DLSS 5 neural rendering, with a browser interface. Everything runs on your own PC.
 
-================
 1. REQUIREMENTS
 ================
 - Windows 10/11, 64-bit
@@ -10,7 +9,6 @@ Waifu2x + NVIDIA DLSS 5 neural rendering, with a browser interface. Everything r
 - About 3 GB of free disk space for the program files, plus space for your videos
 - Internet access while running setup.bat (once)
 
-================
 2. SETUP (once)
 ================
 1. Unzip the folder anywhere (a short path such as C:\Upscaler is easiest).
@@ -32,7 +30,6 @@ Waifu2x + NVIDIA DLSS 5 neural rendering, with a browser interface. Everything r
 UPDATING: unzip a newer version over the same folder (replace files). The folders python, tools, runtime,
 ffmpeg and data (your profiles and history) are kept.
 
-===============
 3. QUICK START
 ===============
 1. Paste the path of a video into "Source" (Shift + right-click the file in Explorer > Copy as path).
@@ -50,7 +47,6 @@ HOW THE PIPELINE WORKS
   Colours: the source's colour matrix is used when decoding and encoding (BT.709 for HD) and the output is tagged,
   so contrast and saturation should not shift. HDR sources are not tone-mapped.
 
-======================
 4. THE TABS AND CARDS
 ======================
 PROFILES (top left)
@@ -90,7 +86,6 @@ HISTORY
   Deleting: "Delete selected" (the ticked rows), "Delete batch of selected" (all logs that share the batch id of
   the selected row), "Delete this date" (all logs of the day picked in the date box) and "Delete all".
 
-====================================================
 5. DLSS 5 NEURAL RENDERING - WHAT EACH SETTING DOES
 ====================================================
 DLSS 5 is NVIDIA's neural rendering pass. It rebuilds material detail (skin, hair, fabric, light on surfaces)
@@ -185,7 +180,6 @@ fallback to plain upscaling). The video is written either way; a failed check on
 Messages such as "NR upscaling fell back to native" and repeated "vtable::Hook(Failed to find ...)" lines in the
 worker log are normal on current runtimes.
 
-============================================================
 6. TEMPORAL CONTROLS (Advanced, under the DLSS 5 settings)
 ============================================================
 Video frames have no motion data, so the app measures how things moved between each frame and the previous one
@@ -218,7 +212,6 @@ Extra lead-in frames that are rendered and thrown away before the first real fra
 settled when your video starts. It can reduce a slightly different look in the very first frames, at the cost of
 a little extra time. Leave at 0 unless the first frames look different from the rest.
 
-====================
 7. EXPORT SETTINGS
 ====================
   Codec      HEVC (H.265): small files, encoded on the GPU. H.264: most compatible. AV1: needs an RTX 40/50 card.
@@ -229,7 +222,6 @@ a little extra time. Leave at 0 unless the first frames look different from the 
   Pre-upscale engine: Waifu2x photo (natural footage) or cunet (cleaner, slightly softer), Real-ESRGAN (optional,
              4x), or "No pre-upscale" (a plain high-quality resize before DLSS).
 
-====================
 8. TROUBLESHOOTING
 ====================
 - "FFmpeg: missing" or "DLSS 5 runtime: ..." at the left: run setup.bat again (it only does what is missing).
@@ -242,7 +234,6 @@ a little extra time. Leave at 0 unless the first frames look different from the 
 - A job stops with an error: the black window and the log box at the top show the details.
 - Delete the folder "work" any time; it only holds temporary files.
 
-=================================
 9. FOLDER CONTENTS AND SHARING
 =================================
 Files that belong to the app: app.py, ui.html, dlss5\, setup.bat, setup.ps1, run.bat, make-share-zip.bat,
