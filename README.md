@@ -3,6 +3,7 @@ Waifu2x + NVIDIA DLSS 5 neural rendering, with a browser interface. Everything r
 
 1. REQUIREMENTS
 ================
+
 - Windows 10/11, 64-bit
 - NVIDIA RTX graphics card (DLSS 5 here runs on RTX 30, 40 and 50 series; RTX 20 and older are refused)
 - A current NVIDIA GeForce driver
@@ -11,6 +12,7 @@ Waifu2x + NVIDIA DLSS 5 neural rendering, with a browser interface. Everything r
 
 2. SETUP (once)
 ================
+
 1. Unzip the folder anywhere (a short path such as C:\Upscaler is easiest).
 2. Double-click setup.bat. It installs, INSIDE this folder only:
      - a private Python 3.12 (your other Python installs are not touched; nothing is added to PATH/registry)
@@ -32,6 +34,7 @@ ffmpeg and data (your profiles and history) are kept.
 
 3. QUICK START
 ===============
+
 1. Paste the path of a video into "Source" (Shift + right-click the file in Explorer > Copy as path).
 2. Click "Preview frame": processes one frame with the current settings and shows it against the original.
 3. Try a few settings changes with Preview until the frame looks right (save them as a Profile).
@@ -49,6 +52,7 @@ HOW THE PIPELINE WORKS
 
 4. THE TABS AND CARDS
 ======================
+
 PROFILES (top left)
   A profile stores the Output, DLSS 5, temporal and Export settings (not the video path or time range).
   Load / Save (overwrite the selected one) / Save as... / Rename / Duplicate / Delete.
@@ -88,6 +92,7 @@ HISTORY
 
 5. DLSS 5 NEURAL RENDERING - WHAT EACH SETTING DOES
 ====================================================
+
 DLSS 5 is NVIDIA's neural rendering pass. It rebuilds material detail (skin, hair, fabric, light on surfaces)
 instead of just sharpening edges. Video has none of the extra information a game supplies, so here it works only
 from the picture and from motion estimated between frames, which makes it fairly conservative.
@@ -182,6 +187,7 @@ worker log are normal on current runtimes.
 
 6. TEMPORAL CONTROLS (Advanced, under the DLSS 5 settings)
 ============================================================
+
 Video frames have no motion data, so the app measures how things moved between each frame and the previous one
 (optical flow) and gives DLSS that information. DLSS uses it to carry detail over from earlier frames, which keeps
 skin and hair steady instead of shimmering from frame to frame. The defaults are the node pack's defaults and are
@@ -214,6 +220,7 @@ a little extra time. Leave at 0 unless the first frames look different from the 
 
 7. EXPORT SETTINGS
 ====================
+
   Codec      HEVC (H.265): small files, encoded on the GPU. H.264: most compatible. AV1: needs an RTX 40/50 card.
   Container  MP4: plays in browsers, phones and most players (non-AAC audio is converted to AAC).
              MKV: keeps audio untouched, but most browsers cannot play HEVC in MKV (use "Browser copy").
@@ -224,6 +231,7 @@ a little extra time. Leave at 0 unless the first frames look different from the 
 
 8. TROUBLESHOOTING
 ====================
+
 - "FFmpeg: missing" or "DLSS 5 runtime: ..." at the left: run setup.bat again (it only does what is missing).
 - Black video in Video compare: use "Browser copy" for that video.
 - "needs the tested experimental Ampere pair": RTX 30 cards need that exact pair of runtime files. Re-run setup.bat
@@ -236,6 +244,7 @@ a little extra time. Leave at 0 unless the first frames look different from the 
 
 9. FOLDER CONTENTS AND SHARING
 =================================
+
 Files that belong to the app: app.py, ui.html, dlss5\, setup.bat, setup.ps1, run.bat, make-share-zip.bat,
 README.txt, THIRD_PARTY_NOTICES.txt.
 Created on your PC by setup.bat or while running: python\, tools\, ffmpeg\, runtime\, data\ (profiles, history),
