@@ -1,0 +1,27 @@
+{
+ "format": "upscaler-profile",
+ "name": "Most agressive for realism",
+ "settings": {
+  "target": "2160",
+  "engine": "waifu2x-photo-x2",
+  "codec": "H.264",
+  "container": "MP4",
+  "quality": "Max",
+  "dlssOn": true,
+  "d_up": "1.5x (Quality)",
+  "d_style": "Cinematic",
+  "d_model": "M",
+  "d_int": "1.0",
+  "d_tone": "1",
+  "d_str": "2.0",
+  "d_skin": "2",
+  "d_mask": true,
+  "d_verify": true,
+  "t_motion": "auto",
+  "t_thresh": "0.24",
+  "t_flow": "640",
+  "t_warm": "0",
+  "i_on": false,
+  "i_factor": "2"
+ }
+}
